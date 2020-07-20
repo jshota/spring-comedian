@@ -15,8 +15,9 @@ public class JokeServiceImpl implements JokeService {
      * Spring will create it once and then will be reused in that class.
      * So it's not going to get created with every request.
      */
-    public JokeServiceImpl(ChuckNorrisQuotes chuckNorrisQuotes) {
-        this.chuckNorrisQuotes = chuckNorrisQuotes;
+
+    public JokeServiceImpl() {
+        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
     }
 
     @Override
